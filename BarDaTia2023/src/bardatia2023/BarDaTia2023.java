@@ -19,7 +19,10 @@ public class BarDaTia2023 {
                 
         m.acrescentarDivida(10);
         m.acrescentarDivida(20);
+        m.pagarDivida(15);
         m.acrescentarDivida(-5);
+        m.pagarDivida(-5);
+        m.zerarDivida();
         m.acrescentarDivida(5);
         
         System.out.println(m.saldoDevedor);

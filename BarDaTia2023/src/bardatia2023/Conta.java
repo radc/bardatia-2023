@@ -14,10 +14,29 @@ public class Conta {
     
     void acrescentarDivida(double valor){
         if(valor > 0){
-            saldoDevedor = saldoDevedor + valor;
+            if(valor + saldoDevedor <= 30){
+                saldoDevedor = saldoDevedor + valor;
+            }else{
+                System.out.println("Erro: Saldo Devedor não pode ser superior a R$30,00");
+            }            
         }else{
             System.out.println("Erro: Não é possível acrescentar com valor inferior a zero!");
+        }        
+    }
+    
+    void pagarDivida(double valor){
+        if(valor > 0){
+            if(valor <= saldoDevedor){ //valor - saldoDevedor <= 0                
+                saldoDevedor -= valor; //saldoDevedor = saldoDevedor - valor;
+            }else{
+                System.out.println("Erro: Não é possível deixar saldo devedor negativo!");
+            }
+        }else{
+            System.out.println("Erro: Não é possível pagar com valor inferior a zero!");
         }
-        
+    }
+    
+    void zerarDivida(){
+        saldoDevedor = 0;
     }
 }
