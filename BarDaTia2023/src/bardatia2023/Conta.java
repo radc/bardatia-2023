@@ -2,6 +2,7 @@
 package bardatia2023;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Conta {
     int id; //Identificação da conta
@@ -39,4 +40,25 @@ public class Conta {
     void zerarDivida(){
         saldoDevedor = 0;
     }
+        
+    void colocarJuros(){
+        saldoDevedor = saldoDevedor * 1.05; 
+    }
+    
+    int diaCriacaoConta(){
+        return dataCriacaoConta.getDayOfMonth();
+    }
+    
+    String dataCriacaoContaFormatada(){
+        //retorna data no estilo 15/05/2023
+        return dataCriacaoConta.format(
+                DateTimeFormatter.ofPattern("dd/MM/yyyy"));   
+    }
+    
+    //criar método colocar juros, que aumenta a divida em 5%
+    //criar método que retorne o dia do mês de criação da conta em int
+    //criar método que retorne a data de criação da conta no formato dd/MM/yyyy
+    //2023-05-12 12/05/2023 DataTimeFormatter
+    
+    
 }
