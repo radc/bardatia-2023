@@ -13,14 +13,17 @@ public class BarDaTia2023 {
         b = new Conta();
         
    
-        c.nome = "Luan";
-        c.id = 1;
-        c.saldoDevedor = 0;
+        //c.nome = "Luan";
+        //c.saldoDevedor = -1100;
+        
+        c.setNome("Luan");
+        c.setSaldoDevedor(100000000);
+        
         c.acrescentarDivida(5);
         c.pagarDivida(2);
         c.colocarJuros();
                 
-        System.out.println("O " + c.nome + " deve R$" + c.saldoDevedor);
+        System.out.println("O " + c.getNome() + " deve " + c.getSaldoDevedor());
         
         
         
