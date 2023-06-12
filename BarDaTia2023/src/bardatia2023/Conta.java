@@ -30,10 +30,10 @@ public class Conta {
             if(valor <= saldoDevedor){ //valor - saldoDevedor <= 0                
                 saldoDevedor -= valor; //saldoDevedor = saldoDevedor - valor;
             }else{
-                System.out.println("Erro: Não é possível deixar saldo devedor negativo!");
+                System.out.println("!Erro: Não é possível deixar saldo devedor negativo!");
             }
         }else{
-            System.out.println("Erro: Não é possível pagar com valor inferior a zero!");
+            System.out.println("!Erro: Não é possível pagar com valor inferior a zero!");
         }
     }
     
@@ -65,7 +65,19 @@ public class Conta {
     }
     
     public void setNome(String nome){
-        this.nome = nome;
+                
+        if(nome.contains("0") || nome.contains("1") || nome.contains("2") || 
+                nome.contains("3") || nome.contains("4") || nome.contains("5") || 
+                nome.contains("6") || nome.contains("7") || nome.contains("8") ||
+                nome.contains("9")){
+            System.out.println("!Erro: Nome possui número!");
+            this.nome = "<<Sem Nome>>";
+        }else{
+            this.nome = nome;
+        }
+            
+                
+        
     }
     
     public double getSaldoDevedor(){

@@ -6,6 +6,29 @@ public class BarDaTia2023 {
 
     public static void main(String[] args) {
         
+        Conta car;
+        car = new Conta();
+        car.setNome("Ruhan Conceicao");
+        car.setSaldoDevedor(0);        
+        System.out.println(car.getNome() + " deve R$" + car.getSaldoDevedor());
+        
+        car.setNome("2000João Pedro");
+        car.setSaldoDevedor(1);        
+        System.out.println(car.getNome() + " deve R$" + car.getSaldoDevedor());
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /*
         Conta c;
         c = new Conta();
         
@@ -25,7 +48,7 @@ public class BarDaTia2023 {
                 
         System.out.println("O " + c.getNome() + " deve " + c.getSaldoDevedor());
         
-        
+        */
         
         
         
